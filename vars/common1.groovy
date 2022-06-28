@@ -14,7 +14,7 @@ def call(String stageName){
      }
   else if ("${stageName}" == "Deploy to UAT")
      {
-       sh deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://54.226.118.23:8080/')], contextPath: null, war: 'target/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://18.237.101.171:8080/')], contextPath: null, war: 'target/*.war'
      }
   else if ("${stageName}" == "Approval Gate")
      {
@@ -24,6 +24,6 @@ def call(String stageName){
      }
   else if ("${stageName}" == "Deploy to Prod")
      {
-       sh deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://54.226.118.23:8080/')], contextPath: null, war: 'target/*.war'
+       deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://18.237.101.171:8080/')], contextPath: null, war: 'target/*.war'
      }
 }
