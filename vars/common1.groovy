@@ -14,7 +14,7 @@ def call(String stageName){
      }
   else if ("${stageName}" == "Deploy to UAT")
      {
-       sh "mvn scp target/*.war ec2-user@18.237.101.171:/opt/tomcat9/webapps"
+       sh "mvn scp target/maven-web-app.war ec2-user@18.237.101.171:/opt/tomcat9/webapps"
      }
   else if ("${stageName}" == "Approval Gate")
      {
