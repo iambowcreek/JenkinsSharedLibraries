@@ -14,7 +14,7 @@ def call(String stageName){
      }
   else if ("${stageName}" == "Deploy to UAT")
      {
-       sh "scp /home/ec2-user/maven_fintech/maven-web-app/target/*.war ec2-user@18.237.101.171:/opt/tomcat9/webapps"
+       sh "deploy adapters: [tomcat9(credentialsId: 'tomcat-cred', path: '', url: 'http://18.237.101.171:8080/')], contextPath: null, war: 'target/*.war'
      }
   else if ("${stageName}" == "Approval Gate")
      {
